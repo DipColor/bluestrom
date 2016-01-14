@@ -257,7 +257,7 @@ end
     return
   end
 
-  if matches[1]:lower() == 'banall' then -- Global ban
+  if matches[1]:lower() == 'siktir' then -- Global ban
     if type(msg.reply_id) ~="nil" and is_admin(msg) then
       return get_message(msg.reply_id,banall_by_reply, false)
     end
@@ -273,7 +273,7 @@ end
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
-		get_cmd = 'banall',
+		get_cmd = 'siktir',
 		from_id = msg.from.id
 	}
 		local username = matches[2]
@@ -308,8 +308,8 @@ end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
+    "^[!/]([Ss]iktir) (.*)$",
+    "^[!/]([Ss]iktir)$",
     "^[!/]([Bb]anlist) (.*)$",
     "^[!/]([Bb]anlist)$",
     "^[!/]([Gg]banlist)$",
